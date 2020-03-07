@@ -32,16 +32,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/*body {
+body {
   margin: 0;
-}*/
-body{
-    background:url(/images/lzy.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:center;
 }
+
 
 article,
 aside,
