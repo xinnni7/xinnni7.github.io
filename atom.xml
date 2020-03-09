@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-07T08:47:19.339Z</updated>
+  <updated>2020-03-09T02:29:09.885Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript</title>
+    <link href="http://yoursite.com/2020/03/07/JavaScript-1/"/>
+    <id>http://yoursite.com/2020/03/07/JavaScript-1/</id>
+    <published>2020-03-07T08:48:00.000Z</published>
+    <updated>2020-03-09T02:29:09.885Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、快速入门"><a href="#1、快速入门" class="headerlink" title="1、快速入门"></a>1、快速入门</h3><h4 id="1-1Javascript的引用"><a href="#1-1Javascript的引用" class="headerlink" title="1.1Javascript的引用"></a>1.1Javascript的引用</h4><p>1.自动弹框</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jx.js:</span><br><span class="line">alert(<span class="string">'hello,world'</span>);</span><br></pre></td></tr></table></figure><p>2.通过js文件来弹框</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"js/jx.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><h4 id="1-2基本语法入门"><a href="#1-2基本语法入门" class="headerlink" title="1.2基本语法入门"></a>1.2基本语法入门</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// 1. 定义变量     变量类型  变量名  =  变量值  （无论什么变量名，变量类型都是var）</span></span><br><span class="line">    <span class="keyword">var</span> score =<span class="number">70</span>;</span><br><span class="line">    <span class="keyword">var</span> name =<span class="string">"jixin"</span>;</span><br><span class="line">    <span class="comment">// alert(num);</span></span><br><span class="line">    <span class="comment">// 2. 条件控制</span></span><br><span class="line">    <span class="keyword">if</span> (score&gt;<span class="number">60</span> &amp;&amp; score&lt;<span class="number">80</span>)&#123;</span><br><span class="line">        alert(<span class="string">"true"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><h4 id="1-3数据类型"><a href="#1-3数据类型" class="headerlink" title="1.3数据类型"></a>1.3数据类型</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">数值，文本，图形，音频，视频……</span><br><span class="line"><span class="built_in">Number</span> , JavaScript不区分整数和浮点数，统一用<span class="built_in">Number</span>表示，以下都是合法的<span class="built_in">Number</span>类型;</span><br><span class="line"><span class="number">123</span>; <span class="comment">// 整数123</span></span><br><span class="line"><span class="number">0.456</span>; <span class="comment">// 浮点数0.456</span></span><br><span class="line"><span class="number">1.2345e3</span>; <span class="comment">// 科学计数法表示1.2345x1000，等同于1234.5</span></span><br><span class="line"><span class="number">-99</span>; <span class="comment">// 负数</span></span><br><span class="line"><span class="literal">NaN</span>; <span class="comment">// NaN表示Not a Number，当无法计算结果时用NaN表示</span></span><br><span class="line"><span class="literal">Infinity</span>; <span class="comment">// Infinity表示无限大，当数值超过了JavaScript的Number所能表示的最大值时，就表示为Infinity</span></span><br><span class="line"></span><br><span class="line">比较运算符！！！</span><br><span class="line">=    赋值</span><br><span class="line">==   等于（类型不一样，值一样。，也会判断<span class="literal">true</span>）坚持不要使用！</span><br><span class="line">===  绝对等于（类型一样，值一样，结果为<span class="literal">true</span>）</span><br><span class="line"></span><br><span class="line">NAN===NAN <span class="literal">false</span>  NAN与所有的数值都不相等，包括自己</span><br><span class="line">只能通过isNAN(NAN)来判断这个数是否是NAN</span><br><span class="line"></span><br><span class="line">数组</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3.14</span>, <span class="string">'Hello'</span>, <span class="literal">null</span>, <span class="literal">true</span>];</span><br><span class="line">arr[<span class="number">0</span>]; <span class="comment">// 返回索引为0的元素，即1</span></span><br><span class="line">arr[<span class="number">5</span>]; <span class="comment">// 返回索引为5的元素，即true</span></span><br><span class="line">arr[<span class="number">6</span>]; <span class="comment">// 索引超出了范围，返回undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// 创建了数组[1, 2, 3]</span></span><br></pre></td></tr></table></figure><h4 id="1-4严格检查模式"><a href="#1-4严格检查模式" class="headerlink" title="1.4严格检查模式"></a>1.4严格检查模式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>; 严格检查模式，预防JavaScript的随意性导致产生的一些问题,必须写在JavaScript的第一行</span><br><span class="line">局部变量都建议用<span class="keyword">let</span>去定义</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="meta">    'use strict'</span>;</span><br><span class="line">     <span class="comment">//ES6 let     settings搜索es6</span></span><br><span class="line">     <span class="keyword">let</span> i =<span class="number">1</span>;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><h3 id="2、数据类型"><a href="#2、数据类型" class="headerlink" title="2、数据类型"></a>2、数据类型</h3><h4 id="2-1字符串"><a href="#2-1字符串" class="headerlink" title="2.1字符串"></a>2.1字符串</h4><p>1.正常字符串我们使用单引号或是双引号</p><p>2.注意转义字符\</p><p>3.多行字符串编写</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="meta">    'use strict'</span></span><br><span class="line">    <span class="keyword">var</span> msg =</span><br><span class="line">        <span class="string">`hello world</span></span><br><span class="line"><span class="string">        你好</span></span><br><span class="line"><span class="string">        `</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p><img src="C:%5CUsers%5Cxinnn%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200219212416906.png" alt="image-20200219212416906"></p><p>4.模板字符串</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="meta">    'use strict'</span></span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">"jixin"</span></span><br><span class="line">    <span class="keyword">let</span> msg = <span class="string">`你好呀，<span class="subst">$&#123;name&#125;</span>`</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p><img src="C:%5CUsers%5Cxinnn%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200219213029405.png" alt="image-20200219213029405"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1、快速入门&quot;&gt;&lt;a href=&quot;#1、快速入门&quot; class=&quot;headerlink&quot; title=&quot;1、快速入门&quot;&gt;&lt;/a&gt;1、快速入门&lt;/h3&gt;&lt;h4 id=&quot;1-1Javascript的引用&quot;&gt;&lt;a href=&quot;#1-1Javascript的引用&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>WELCOME</title>
     <link href="http://yoursite.com/2020/03/06/hello-world/"/>
     <id>http://yoursite.com/2020/03/06/hello-world/</id>
     <published>2020-03-06T01:46:00.000Z</published>
-    <updated>2020-03-07T08:47:19.339Z</updated>
+    <updated>2020-03-09T02:48:25.793Z</updated>
     
-    <content type="html"><![CDATA[<p>走过路过不要错过，有钱的捧个钱场，没钱的捧个人场~</p>]]></content>
+    <content type="html"><![CDATA[<p>走过路过不要错过，有钱的捧个钱场，没钱的捧个人场~</p><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="/vedio/rxxz.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;走过路过不要错过，有钱的捧个钱场，没钱的捧个人场~&lt;/p&gt;
-
+&lt;div style=&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;&gt;&lt;iframe 
+src=&quot;/vedio/rxxz.mp4
       
     
     </summary>
